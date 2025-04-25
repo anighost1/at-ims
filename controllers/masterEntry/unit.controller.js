@@ -52,7 +52,7 @@ export const find = async (req, res) => {
         }
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Unit found successfully',
             result
         )
@@ -91,7 +91,7 @@ export const getUnits = async (req, res) => {
         const { result, pagination } = await paginate(Unit, whereClause, page, take);
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Unit found successfully',
             result,
             { pagination }

@@ -52,7 +52,7 @@ export const find = async (req, res) => {
         }
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Storage found successfully',
             result
         )
@@ -95,7 +95,7 @@ export const getStorage = async (req, res) => {
         const { result, pagination } = await paginate(Storage, whereClause, page, take);
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Storage found successfully',
             result,
             { pagination }

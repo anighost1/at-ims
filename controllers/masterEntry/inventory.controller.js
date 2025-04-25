@@ -52,7 +52,7 @@ export const find = async (req, res) => {
         }
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Inventory found successfully',
             category
         )
@@ -92,7 +92,7 @@ export const getInventories = async (req, res) => {
         const { result, pagination } = await paginate(Inventory, whereClause, page, take);
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Inventory found successfully',
             result,
             { pagination }

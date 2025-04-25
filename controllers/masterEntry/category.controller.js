@@ -52,7 +52,7 @@ export const find = async (req, res) => {
         }
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Category found successfully',
             category
         )
