@@ -90,7 +90,7 @@ export const getCategories = async (req, res) => {
         const { result, pagination } = await paginate(Category, whereClause, page, take);
         generateResponse(
             res,
-            HttpStatus.Found,
+            HttpStatus.OK,
             'Category found successfully',
             result,
             { pagination }
